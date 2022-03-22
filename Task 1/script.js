@@ -18,10 +18,12 @@ document.querySelector("#forma").addEventListener("submit", (e) => {
   let output = document.querySelector("#output");
   output.innerHTML = `
   <h1>Results</h1>
+  <div>Svoris kilogramais(kg) = ${svorisKg}</div>
   <div>Svoris svarais(lb) = ${lb}</div>
   <div>Svoris gramais(g) = ${g}</div>
   <div>Svoris uncijomis(oz) = ${oz}</div>
   `;
   output.style.textAlign = "center";
   output.style.fontSize = "1.3em";
+  e.target.elements.search.value = null;
 });
