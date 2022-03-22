@@ -9,13 +9,37 @@ atveju grąžins masyvą su "users", kurie yra pilnamečiai.
 -------------------------------------------------------------------------- */
 
 const users = [
-  { id: '1', name: 'John Smith', age: 20, hasDog: true },
-  { id: '2', name: 'Ann Smith', age: 24, hasDog: false },
-  { id: '3', name: 'Tom Jones', age: 31, hasDog: true },
-  { id: '4', name: 'Rose Peterson', age: 17, hasDog: false },
-  { id: '5', name: 'Alex John', age: 25, hasDog: true },
-  { id: '6', name: 'Ronald Jones', age: 63, hasDog: true },
-  { id: '7', name: 'Elton Smith', age: 16, hasDog: true },
-  { id: '8', name: 'Simon Peterson', age: 30, hasDog: false },
-  { id: '9', name: 'Daniel Cane', age: 51, hasDog: true },
+  { id: "1", name: "John Smith", age: 20, hasDog: true },
+  { id: "2", name: "Ann Smith", age: 24, hasDog: false },
+  { id: "3", name: "Tom Jones", age: 31, hasDog: true },
+  { id: "4", name: "Rose Peterson", age: 17, hasDog: false },
+  { id: "5", name: "Alex John", age: 25, hasDog: true },
+  { id: "6", name: "Ronald Jones", age: 63, hasDog: true },
+  { id: "7", name: "Elton Smith", age: 16, hasDog: true },
+  { id: "8", name: "Simon Peterson", age: 30, hasDog: false },
+  { id: "9", name: "Daniel Cane", age: 51, hasDog: true },
 ];
+
+function filterDogOwners(users) {
+  var final = [];
+  users.filter((user) => {
+    if (user.hasDog === true) {
+      final.push(user);
+    }
+  });
+  console.log(final);
+}
+
+filterDogOwners(users);
+
+function filterAdults(users) {
+  var legalAge = [];
+  users.filter((user) => {
+    if (user.age >= 18) {
+      legalAge.push(user);
+    }
+  });
+  console.log(legalAge);
+}
+
+filterAdults(users);
